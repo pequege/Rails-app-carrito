@@ -1,0 +1,59 @@
+commit aa08aa4f092708239db1473434e445ca7b247fb3
+Author: Ery Lopez <ery@ery.Home>
+Date:   Tue Jun 2 11:44:04 2015 -0300
+
+    moved cart to side bar
+
+commit 3343141b300da5046c6c6222b090e8d021156035
+Author: Ery Lopez <ery@ery.Home>
+Date:   Mon Jun 1 17:40:19 2015 -0300
+
+    fixed cart controller and notice
+
+commit 24c8f122b0f324b133d3c2d8ef0a07b30675d410
+Author: Ery Lopez <ery@ery.Home>
+Date:   Mon Jun 1 16:53:47 2015 -0300
+
+    upgraded cart
+
+commit bd8bc0b518b160b262df566f17efb467891dd057
+Author: Ery Lopez <ery@ery.Home>
+Date:   Mon Jun 1 12:16:44 2015 -0300
+
+    modified cart controller
+
+commit 66eaba2670ac8ee7861b3b9d1eba4472af29a865
+Author: Ery Lopez <ery@ery.Home>
+Date:   Fri May 29 16:21:33 2015 -0300
+
+    added cart controller
+
+commit c187d0eb8dfbf0c0c35b073c8fac3760623842db
+Author: Ery Lopez <ery@ery.Home>
+Date:   Thu May 28 18:26:04 2015 -0300
+
+    added helper to display 'dollar sign'
+
+commit aab6abbe29c05629d57a8d0c70561d4e8f9a2a10
+Author: Ery Lopez <ery@ery.Home>
+Date:   Thu May 28 17:37:22 2015 -0300
+
+    Added new page layout for all views
+
+commit cf6c75bfe9db634436cf93f5ab3dc132529a8cbf
+Author: Ery Lopez <ery@ery.Home>
+Date:   Thu May 28 17:14:32 2015 -0300
+
+    generated Store controller and fixed stylesheets
+
+commit c85681f84c28c8dbac10c482484b16a239c66d7b
+Author: Ery Lopez <ery@ery.Home>
+Date:   Thu May 28 16:03:44 2015 -0300
+
+    added valitation to fields
+
+commit 8e1eb563d4466a4608d4b10251297dbe460e84b2
+Author: Ery Lopez <ery@ery.Home>
+Date:   Thu May 28 14:25:30 2015 -0300
+
+    Initial commit
