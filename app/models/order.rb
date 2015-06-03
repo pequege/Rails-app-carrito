@@ -6,5 +6,7 @@ class Order < ActiveRecord::Base
 			item.cart_id = nil
 			line_items << item
 		end
-	end		
+	end
+	validates :name, :address, :email, presence: true
+	validates :pay_type, inclusion: PAYMENT_TYPES		
 end
