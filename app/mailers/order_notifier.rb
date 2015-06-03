@@ -5,10 +5,15 @@ class OrderNotifier < ApplicationMailer
   #
   #   en.order_notifier.received.subject
   #
-  def received
-    @greeting = "Hi"
+  def received(order)
+    @order = order
+    mail to: order.email, subject: 'Pragmatic Store Order Confirmation'
+  end
 
-    mail to: "to@example.org", subject: "hola"
+
+  def shipped(order)
+    @order = order
+    mail to: order.email, subject: 'Pragmatic Store Order Shipped'
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
