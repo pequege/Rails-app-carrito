@@ -1,0 +1,24 @@
+<p>
+  <strong>Title:</strong>
+  <%= @tutorial.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tutorial.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @tutorial.image_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tutorial.price %>
+</p>
+
+<%= image_tag @tutorial.file.url %>
+
+<%= link_to 'Edit', edit_tutorial_path(@tutorial) %> |
+<%= link_to 'Back', tutorials_path %>
