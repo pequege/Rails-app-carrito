@@ -1,31 +1,18 @@
-<h1>Listing Tutorials</h1>
+<div class="store">
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @tutorials.each do |tutorial| %>
+  <div class="entry">
+    <%= image_tag(tutorial.image_url) %>
+    <h3><%= link_to tutorial.title, tutorial_path(tutorial) %></h3>
+    <p><%= sanitize(tutorial.description) %></p>
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(tutorial.price, raise: true) %></span>
+      <!-- <%= button_to t('.add_html'), line_items_path(tutorial_id: tutorial), remote: true %> -->
+    </div>
+  </div>
+<% end %>
 
-  <tbody>
-    <% @tutorials.each do |tutorial| %>
-      <tr>
-        <td><%= tutorial.title %></td>
-        <td><%= tutorial.description %></td>
-        <td><%= tutorial.image_url %></td>
-        <td><%= tutorial.price %></td>
-        <td><%= link_to 'Show', tutorial %></td>
-        <td><%= link_to 'Edit', edit_tutorial_path(tutorial) %></td>
-        <td><%= link_to 'Destroy', tutorial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
 <%= link_to 'New Tutorial', new_tutorial_path %>
+</div>
