@@ -8,10 +8,12 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @tutorial.price %>
+  <%= number_to_currency(@tutorial.price) %>
 </p>
 
-<%= link_to "Descargar", @tutorial.file.url %>
+<% if @current_user.tutorials.include?(@tutorial) %>
+  <%= link_to "Descargar", @tutorial.file.url %>
+<% end -%>
 
 <%= link_to 'Edit', edit_tutorial_path(@tutorial) %> |
 <%= link_to 'Back', tutorials_path %>

@@ -11,6 +11,12 @@ Depot::Application.routes.draw do
   get "sessions/create"
   get "sessions/destroy"
 
+  resources :user_tutorials do
+    collection do
+      get '/:tutorial_id/buy', to: :new, as: 'buy'
+    end 
+  end
+
   resources :users
 
   resources :products do

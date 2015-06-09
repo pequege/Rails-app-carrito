@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :user_tutorials
+  has_many :tutorials, through: :user_tutorials
+
   validates :name, presence: true, uniqueness: true
   has_secure_password
 

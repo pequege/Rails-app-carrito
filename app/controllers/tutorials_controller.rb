@@ -1,4 +1,5 @@
 class TutorialsController < ApplicationController
+  skip_before_action :authorize, only: [:index]
   before_action :set_tutorial, only: [:show, :edit, :update, :destroy]
 
   # GET /tutorials
@@ -10,6 +11,7 @@ class TutorialsController < ApplicationController
   # GET /tutorials/1
   # GET /tutorials/1.json
   def show
+    @current_user = User.find(session[:user_id])
   end
 
   # GET /tutorials/new

@@ -1,13 +1,15 @@
-<div class="store">
+<div class="tutorials">
 
 <% @tutorials.each do |tutorial| %>
   <div class="entry">
-    <%= image_tag(tutorial.image_url) %>
+    <%= link_to image_tag(tutorial.image_url), tutorial_path(tutorial) %>
     <h3><%= link_to tutorial.title, tutorial_path(tutorial) %></h3>
     <p><%= sanitize(tutorial.description) %></p>
     <div class="price_line">
       <span class="price"><%= number_to_currency(tutorial.price, raise: true) %></span>
-      <!-- <%= button_to t('.add_html'), line_items_path(tutorial_id: tutorial), remote: true %> -->
+      <% if session[:user_id] %>
+        <%= button_to "Buy", buy_user_tutorials_path(tutorial_id: tutorial), method: :get%>
+      <% end -%>
     </div>
   </div>
 <% end %>
