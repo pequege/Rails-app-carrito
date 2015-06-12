@@ -1,0 +1,2 @@
+      invoke  active_record
+   identical    db/migrate/20150612153048_add_admin_to_users.rb

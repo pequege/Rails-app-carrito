@@ -11,7 +11,6 @@ class TutorialsController < ApplicationController
   # GET /tutorials/1
   # GET /tutorials/1.json
   def show
-    @current_user = User.find(session[:user_id])
   end
 
   # GET /tutorials/new

@@ -10,8 +10,7 @@
   <strong>Price:</strong>
   <%= number_to_currency(@tutorial.price) %>
 </p>
-
-<% if @current_user.tutorials.include?(@tutorial) %>
+<% if user_signed_in? && current_user.tutorials.include?(@tutorial) %>
   <%= link_to "Descargar", @tutorial.file.url %>
 <% end -%>
 

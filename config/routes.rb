@@ -1,15 +1,16 @@
 Depot::Application.routes.draw do
+  devise_for :users
   resources :tutorials
   get 'admin' => 'admin#index'
 
-  controller :sessions do
-    get  'login' => :new
-    post 'login' => :create
-    delete 'logout' => :destroy
-  end
+  # controller :sessions do
+  #   get  'login' => :new
+  #   post 'login' => :create
+  #   delete 'logout' => :destroy
+  # end
 
-  get "sessions/create"
-  get "sessions/destroy"
+  # get "sessions/create"
+  # get "sessions/destroy"
 
   resources :user_tutorials do
     collection do

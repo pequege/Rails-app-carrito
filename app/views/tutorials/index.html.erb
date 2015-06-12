@@ -7,14 +7,15 @@
     <p><%= sanitize(tutorial.description) %></p>
     <div class="price_line">
       <span class="price"><%= number_to_currency(tutorial.price, raise: true) %></span>
-      <% if session[:user_id] %>
+      <% if user_signed_in? %>
         <%= button_to "Buy", buy_user_tutorials_path(tutorial_id: tutorial), method: :get%>
       <% end -%>
     </div>
   </div>
 <% end %>
 
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'New Tutorial', new_tutorial_path %>
+<% end %>
 
-
-<%= link_to 'New Tutorial', new_tutorial_path %>
 </div>
