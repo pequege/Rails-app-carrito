@@ -6,7 +6,7 @@ class UserTutorialsController < ApplicationController
 
   def create
     @order = UserTutorial.new(order_params)
-    @order.user_id = session[:user_id]
+    @order.user_id = current_user.id
     if @order.save
       redirect_to tutorials_path, notice: 'Gracias por su compra'
     else

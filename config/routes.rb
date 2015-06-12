@@ -1,4 +1,5 @@
 Depot::Application.routes.draw do
+  devise_for :admins
   devise_for :users
   resources :tutorials
   get 'admin' => 'admin#index'

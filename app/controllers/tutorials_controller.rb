@@ -1,5 +1,6 @@
 class TutorialsController < ApplicationController
   skip_before_action :authorize, only: [:index]
+  before_action :authenticate_admin!, except: [:index, :show]
   before_action :set_tutorial, only: [:show, :edit, :update, :destroy]
 
   # GET /tutorials
