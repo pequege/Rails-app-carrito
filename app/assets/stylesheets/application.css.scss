@@ -27,6 +27,24 @@
   }
 }
 
+#admin{
+  ul{
+    border-radius: 6px;
+    background: #27AE60;
+    color: #e6e6e6;
+    list-style: none;
+    li:first-child{
+      font-weight: bold;
+    }
+    li{
+      padding-left: 5px;
+    }
+    li:visited{
+      text-decoration: none;
+    }
+  }
+}
+
 #notice {
   color: #fff !important;
   padding: 1em;

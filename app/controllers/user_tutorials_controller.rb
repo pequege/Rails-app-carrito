@@ -5,12 +5,16 @@ class UserTutorialsController < ApplicationController
   end
 
   def create
-    @order = UserTutorial.new(order_params)
-    @order.user_id = current_user.id
-    if @order.save
-      redirect_to tutorials_path, notice: 'Gracias por su compra'
+    if current_user
+      @order = UserTutorial.new(order_params)
+      @order.user_id = current_user.id
+      if @order.save
+        redirect_to tutorials_path, notice: 'Gracias por su compra'
+      else
+        render action: 'new'
+      end
     else
-      render action: 'new'
+      redirect_to user_session_path, notice: 'Debes estar loggueado para poder comprar'
     end
   end
 

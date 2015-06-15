@@ -15,7 +15,7 @@
   <%= link_to "Descargar", @tutorial.file.url %>
 <% end %>
 
-<% if user_signed_in? && current_user.admin? %>
+<% if admin_signed_in? %>
   <%= link_to 'Edit', edit_tutorial_path(@tutorial) %>
 <% end %>
  |

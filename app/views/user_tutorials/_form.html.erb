@@ -20,6 +20,15 @@
     <%= f.label :pay_type, t('.pay_type') %><br>
     <%= f.select :pay_type, Order::PAYMENT_TYPES %>
   </div>
+  <div class="field">
+    <%= f.label :address, t('.address') %><br>
+    <%= f.text_area :address, rows: 3, cols: 40, placeholder: 'Calle Falsa 123' %>
+  </div>
+  <div class="field">
+    <%= f.label :email, t('.email') %><br>
+    <%= f.text_field :email, size:40, placeholder:'nombre@ejemplo.com' %>
+  </div>
+  <div class="field">
   <div class="actions">
     <%= f.submit "BUY NOW!" %>
   </div>
